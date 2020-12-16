@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load user_filters %}
+{% block title %} Новые записи {% endblock %}
+{% block header %} Создание новой записи {% endblock %}
+{% block content %}
+    <form method = 'post'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary">
+            Отправить
+        </button>
+    </form>
+{% endblock %}
