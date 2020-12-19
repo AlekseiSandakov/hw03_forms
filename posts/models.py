@@ -1,8 +1,7 @@
 from django.utils.text import Truncator
-
 from django.db import models
-
 from django.contrib.auth import get_user_model
+
 
 User = get_user_model()
 
@@ -28,6 +27,6 @@ class Post(models.Model):
     def __str__(self):
         self.text = Truncator(self.text).words(10)
         return f'{self.text, self.pub_date, self.author, self.group}'
-        
+
     class Meta:
         ordering = ['-pub_date']

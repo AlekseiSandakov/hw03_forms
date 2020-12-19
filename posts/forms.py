@@ -15,4 +15,3 @@ class PostForm(ModelForm):
             'text': 'Введите текст новой записи',
             'group': 'Укажите группу'
         }
-
